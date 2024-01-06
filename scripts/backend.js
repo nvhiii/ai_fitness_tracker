@@ -8,44 +8,16 @@ async function run() {
   const genAI = new GoogleGenerativeAI(API_KEY);
   const model = genAI.getGenerativeModel({ model: MODEL_NAME });
 
-  const generationConfig = {
-    temperature: 0.9,
-    topK: 1,
-    topP: 1,
-    maxOutputTokens: 2048,
-  };
+  prompt = "Make an exercise routine for a female who is 150-180 pounds and ages 25-32 is 5 foot 5 inches. She is new to fitness and has one hour to allocate per day."
+  const result = await model.generateContentStream(prompt);
 
-  const safetySettings = [
-    {
-      category: HarmCategory.HARM_CATEGORY_HARASSMENT,
-      threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
-    },
-    {
-      category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
-      threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
-    },
-    {
-      category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
-      threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
-    },
-    {
-      category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
-      threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
-    },
-  ];
+  let text = '';
+  for await (const chunk of result.stream) {
+    const chunkText = chunk.text();
+    console.log(chunkText);
+    text += chunkText;
+  }
 
-  const parts = [
-    { text: "Make an exercise routine for a female who is 150-180 pounds and ages 25-32 is 5 foot 5 inches. She is new to fitness and has one hour to allocate per day." },
-  ];
-
-  const result = await model.generateContent({
-    contents: [{ role: "user", parts }],
-    generationConfig,
-    safetySettings,
-  });
-
-  const response = result.response;
-  console.log(response.text());
 }
 
 run();
