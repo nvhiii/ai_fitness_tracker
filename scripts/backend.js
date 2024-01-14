@@ -4,38 +4,58 @@ const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require("@googl
 const MODEL_NAME = "gemini-pro";
 const API_KEY = "AIzaSyDf0vX1frSdozgaOtOzmS5tb8ZNtt7T95Q";
 
-async function run() {
-    const genAI = new GoogleGenerativeAI(API_KEY);
-    const model = genAI.getGenerativeModel({ model: MODEL_NAME });
+/**
+  * Calls API to generate workout plan based on user input.
+  * @param user_input - User demographic information
+  * @return Promise that resolves to generated workout plan
+  */
+async function generateWorkoutPlan(user_input) {
+    try {
+	const genAI = new GoogleGenerativeAI(API_KEY);
+	const model = genAI.getGenerativeModel({ model: MODEL_NAME });
 
-    const gender = "female";
-    const weight_class = "150-180 pounds";
-    const age_range = "25-32";
-    const height = "5 foot 5 inches";
-    const experience = "new to fitness";
-    const time_available = "one hour per day";
+	const prompt = `Create a strength-training routine for a ${user_input.age_range} year-old ${user_input.gender} who weighs ${user_input.weight_class} and is ${user_input.height} tall. They are ${user_input.experience} and have ${user_input.time_available} to allocate per day.`;
 
-    const prompt = `Create a strength-training routine for a ${age_range} year-old ${gender} who weighs ${weight_class} and is ${height} tall. They are ${experience} and have ${time_available} to allocate per day.`;
-    
-    // Streaming
-    const result = await model.generateContentStream(prompt);
+	// Without streaming
+	/*
+	  const result = await model.generateContent(prompt);
+	  const response = await result.response;
+	  const workout_plan = response.text();
+	*/
+	
+	// Streaming
+	const result = await model.generateContentStream(prompt);
+	let workout_plan = '';
+	for await (const chunk of result.stream) {
+	    const chunkText = chunk.text();
+	    console.log(chunkText);
+	    workout_plan += chunkText;	       
+	}
 
-    let text = '';
-    for await (const chunk of result.stream) {
-	const chunkText = chunk.text();
-	console.log(chunkText);
-	text += chunkText;
+	return workout_plan;
+	
+    } catch (error) {
+	console.error("Error generating workout plan:", error.message);
+	throw error;
     }
-
-    // Without streaming
-    /*
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
-    console.log(text);
-    */
-
 }
 
-run();
+// Example user input
+const user_input = {
+    gender: "female",
+    weight_class: "150-180 pounds",
+    age_range: "25-32",
+    height: "5 foot 5 inches",
+    experience: "new to fitness",
+    time_available: "one hour per day",
+};
 
+// Calling the generate function with user input
+generateWorkoutPlan(user_input)
+    .then((workout_plan) => {
+	console.log("Your Workout Plan:");
+	console.log(workout_plan);
+    })
+    .catch((error) => {
+	console.error("Error:", error.message);
+    });
