@@ -44,15 +44,61 @@
             </nav>
         </header>
 
-        <!-- User Input -->
+        <!-- Prompt user to inp,ut like so: Take in user input (demographics): “The person is a {gender} who has a weight class of {weight class} and is {age} years old with a height of {height} and is a {experience}.” 
+            // update prompt to include time avail + type of strength training -->
 
-        <!-- Generate workout, figure out if new page or loading on same page -->
+        <!-- Prompt user to input -->
+        <div class="prompt-section">
+            <p>Please input values in the following format:</p>
+            <p>Create a strength-training routine for a ${ageRange} year-old ${gender} who weighs ${weightClass} and is ${height} tall. They are ${experience} and have ${timeAvailable} to allocate per day.</p>
+    
+            <label for="ageRange">Age Range:</label>
+            <input type="text" id="ageRange" placeholder="e.g., 25-32">
+    
+            <label for="gender">Gender:</label>
+            <input type="text" id="gender" placeholder="e.g., Female">
+    
+            <label for="weightClass">Weight Class:</label>
+            <input type="text" id="weightClass" placeholder="e.g., 150-180 pounds">
+    
+            <label for="height">Height:</label>
+            <input type="text" id="height" placeholder="e.g., 5 foot 5 inches">
+    
+            <label for="experience">Experience:</label>
+            <input type="text" id="experience" placeholder="e.g., New to fitness">
+    
+            <label for="timeAvailable">Time Available:</label>
+            <input type="text" id="timeAvailable" placeholder="e.g., One hour per day">
+    
+            <button onclick="generateWorkout()">Generate Workout</button>
+        </div>
+
+        
+        <!-- Result section -->
+        <div class="result-section">
+            <h2>Generated Workout:</h2>
+            <p id="generated-text"></p>
+        </div>
+
+        <!-- Generate workout regimen on the same page -->
+
+        <!-- Each workout in the regimen can be redirected to a specific page for the workout -->
+
 
         <!-- Footer -->
         <footer>
             &copy; AI Fit Scheduler 2024
             <!-- Social Handles are to be refrained, *maybe* link GitHub repo -->
         </footer>   
-        
+
+        <script src="../scripts/backend.js"></script>
+        <script>
+            function generateWorkout() {
+                const gender = document.getElementById("gender").value;
+                // Get values from other input fields...
+    
+                run(gender, /* other values... */);
+            }
+        </script>
     </body>
 </html>

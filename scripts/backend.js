@@ -4,38 +4,34 @@ const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require("@googl
 const MODEL_NAME = "gemini-pro";
 const API_KEY = "AIzaSyDf0vX1frSdozgaOtOzmS5tb8ZNtt7T95Q";
 
-async function run() {
+// modified code and removed the hardcoded parameters, now 
+async function run(gender, weightClass, ageRange, height, experience, timeAvailable) {
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: MODEL_NAME });
 
-    const gender = "female";
-    const weight_class = "150-180 pounds";
-    const age_range = "25-32";
-    const height = "5 foot 5 inches";
-    const experience = "new to fitness";
-    const time_available = "one hour per day";
+    const prompt = `Create a strength-training routine for a ${ageRange} year-old ${gender} who weighs ${weightClass} and is ${height} tall. They are ${experience} and have ${timeAvailable} to allocate per day.`;
 
-    const prompt = `Create a strength-training routine for a ${age_range} year-old ${gender} who weighs ${weight_class} and is ${height} tall. They are ${experience} and have ${time_available} to allocate per day.`;
-    
-    // Streaming
-    const result = await model.generateContentStream(prompt);
+    try {
+        const result = await model.generateContentStream(prompt);
 
-    let text = '';
-    for await (const chunk of result.stream) {
-	const chunkText = chunk.text();
-	console.log(chunkText);
-	text += chunkText;
+        let text = '';
+        for await (const chunk of result.stream) {
+            const chunkText = chunk.text();
+            console.log(chunkText);
+            text += chunkText;
+        }
+
+        console.log("Generated Workout:", text);
+
+        // Update the generated-text element with the result
+        updateGeneratedText(text);
+        
+    } catch (error) {
+        console.error("Error generating content:", error.message);
     }
-
-    // Without streaming
-    /*
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
-    console.log(text);
-    */
-
 }
 
-run();
+// Example usage:
+// run("female", "150-180 pounds", "25-32", "5 foot 5 inches", "new to fitness", "one hour per day");
+
 
