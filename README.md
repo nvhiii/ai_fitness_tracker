@@ -1,7 +1,7 @@
 # ai_fitness_tracker
 Google presentation for early February
 
-For nodejs:
+For nodejs (v18+)
 run the commands:
 
 <br>npm install
