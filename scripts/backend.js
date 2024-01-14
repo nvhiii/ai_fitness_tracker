@@ -42,7 +42,6 @@ async function generateWorkoutPlan(user_input) {
 		throw error;
     }
 }
-/*
 
 // Example user input
 const user_input = {
@@ -63,5 +62,3 @@ generateWorkoutPlan(user_input)
     .catch((error) => {
 	console.error("Error:", error.message);
     });
-	
-*/
