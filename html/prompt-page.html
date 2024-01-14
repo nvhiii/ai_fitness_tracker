@@ -12,6 +12,9 @@
     </head>
     <body>
 
+        <!-- Include backend.js script -->
+        <script src="../scripts/backend.js"></script>
+        
         <!-- Header with images and content -->
         <header>
             <div class="logo">
@@ -44,40 +47,31 @@
             </nav>
         </header>
 
-        <!-- Prompt user to inp,ut like so: Take in user input (demographics): “The person is a {gender} who has a weight class of {weight class} and is {age} years old with a height of {height} and is a {experience}.” 
-            // update prompt to include time avail + type of strength training -->
+        <!-- Take in user input (demographics): “The person is a {gender} who has a weight class of {weight class} and is {age} years old with a height of {height} and is a {experience}.” -->
 
         <!-- Prompt user to input -->
         <div class="prompt-section">
-            <p>Please input values in the following format:</p>
-            <p>Create a strength-training routine for a ${ageRange} year-old ${gender} who weighs ${weightClass} and is ${height} tall. They are ${experience} and have ${timeAvailable} to allocate per day.</p>
-    
-            <label for="ageRange">Age Range:</label>
-            <input type="text" id="ageRange" placeholder="e.g., 25-32">
-    
             <label for="gender">Gender:</label>
-            <input type="text" id="gender" placeholder="e.g., Female">
+            <input type="text" id="gender" placeholder="Enter gender">
     
-            <label for="weightClass">Weight Class:</label>
-            <input type="text" id="weightClass" placeholder="e.g., 150-180 pounds">
+            <label for="weight">Weight Class:</label>
+            <input type="text" id="weight" placeholder="Enter weight class">
+    
+            <label for="age">Age:</label>
+            <input type="text" id="age" placeholder="Enter age">
     
             <label for="height">Height:</label>
-            <input type="text" id="height" placeholder="e.g., 5 foot 5 inches">
+            <input type="text" id="height" placeholder="Enter height">
     
             <label for="experience">Experience:</label>
-            <input type="text" id="experience" placeholder="e.g., New to fitness">
+            <input type="text" id="experience" placeholder="Enter experience">
     
-            <label for="timeAvailable">Time Available:</label>
-            <input type="text" id="timeAvailable" placeholder="e.g., One hour per day">
-    
-            <button onclick="generateWorkout()">Generate Workout</button>
+            <button onclick="generateWorkout()">Generate Workout Plan</button>
         </div>
-
         
         <!-- Result section -->
         <div class="result-section">
-            <h2>Generated Workout:</h2>
-            <p id="generated-text"></p>
+
         </div>
 
         <!-- Generate workout regimen on the same page -->
@@ -91,14 +85,30 @@
             <!-- Social Handles are to be refrained, *maybe* link GitHub repo -->
         </footer>   
 
-        <script src="../scripts/backend.js"></script>
         <script>
-            function generateWorkout() {
-                const gender = document.getElementById("gender").value;
-                // Get values from other input fields...
+            // Function to extract user input and generate workout plan
+            async function generateWorkout() {
+                const user_input = {
+                    gender: document.getElementById('gender').value,
+                    weight_class: document.getElementById('weight').value,
+                    age_range: document.getElementById('age').value,
+                    height: document.getElementById('height').value,
+                    experience: document.getElementById('experience').value
+                };
     
-                run(gender, /* other values... */);
+                try {
+                    const workout_plan = await generateWorkoutPlan(user_input);
+    
+                    // Display the workout plan in the result section
+                    const resultSection = document.getElementById('resultSection');
+                    resultSection.innerHTML = `<h2>Generated Workout Plan:</h2><p>${workout_plan}</p>`;
+                } catch (error) {
+                    console.error("Error generating workout plan:", error.message);
+                    // Handle errors as needed
+                }
             }
         </script>
-    </body>
+
+        
+</body>
 </html>

@@ -14,6 +14,8 @@ async function generateWorkoutPlan(user_input) {
 	const genAI = new GoogleGenerativeAI(API_KEY);
 	const model = genAI.getGenerativeModel({ model: MODEL_NAME });
 
+	// user_input.type
+
 	const prompt = `Create a strength-training routine for a ${user_input.age_range} year-old ${user_input.gender} who weighs ${user_input.weight_class} and is ${user_input.height} tall. They are ${user_input.experience} and have ${user_input.time_available} to allocate per day.`;
 
 	// Without streaming
@@ -26,6 +28,7 @@ async function generateWorkoutPlan(user_input) {
 	// Streaming
 	const result = await model.generateContentStream(prompt);
 	let workout_plan = '';
+
 	for await (const chunk of result.stream) {
 	    const chunkText = chunk.text();
 	    console.log(chunkText);
@@ -35,10 +38,11 @@ async function generateWorkoutPlan(user_input) {
 	return workout_plan;
 	
     } catch (error) {
-	console.error("Error generating workout plan:", error.message);
-	throw error;
+		console.error("Error generating workout plan:", error.message);
+		throw error;
     }
 }
+/*
 
 // Example user input
 const user_input = {
@@ -59,3 +63,5 @@ generateWorkoutPlan(user_input)
     .catch((error) => {
 	console.error("Error:", error.message);
     });
+	
+*/
