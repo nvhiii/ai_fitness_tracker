@@ -103,10 +103,13 @@ footer {
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-size: 36px;
+    font-size: 42px;
 }
 
 button{
-    background: linear-gradient(to right, #3498db, #2c3e50);
+    background: linear-gradient(to right, #3498db, #4169E1);
     font-size: 24px;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
 }
