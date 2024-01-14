@@ -6,8 +6,18 @@ body, h1, h2, h3, p, ul {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #00008B;
+    background: linear-gradient(to bottom, #4169E1, #001f3f);
+    animation: gradientAnimation 5s infinite alternate;
 }
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
 
 /* Header Styles */
 header {
@@ -107,9 +117,13 @@ footer {
 }
 
 button{
-    background: linear-gradient(to right, #3498db, #4169E1);
+    background: linear-gradient(to right, #3498db, #001f3f);
     font-size: 24px;
     cursor: pointer;
-    color: white;
+    color: #faebd7;
     border-radius: 10px;
+}
+
+.prompt-section p{
+    color: white:
 }
