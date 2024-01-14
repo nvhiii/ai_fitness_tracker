@@ -114,16 +114,35 @@ footer {
     height: 100vh;
     margin: 0;
     font-size: 42px;
+    animation: fadeIn 1s ease-out;
 }
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 button{
-    background: linear-gradient(to right, #3498db, #001f3f);
     font-size: 24px;
     cursor: pointer;
-    color: #faebd7;
-    border-radius: 10px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    color: #4169E1;
+    width: 150px;
+    height: 50px;
 }
 
+button:hover {
+    background-color: #f2f2f2;
+    color: #4169E1;
+  }
+
 .prompt-section p{
-    color: white:
+    color: white;
 }
