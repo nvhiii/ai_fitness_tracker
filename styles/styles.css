@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: ;
+    background-color: #00008B;
 }
 
 /* Header Styles */
@@ -94,4 +94,19 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.sections{
+    color: #ffd700;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 36px;
+}
+
+button{
+    background: linear-gradient(to right, #3498db, #2c3e50);
+    font-size: 24px;
 }
