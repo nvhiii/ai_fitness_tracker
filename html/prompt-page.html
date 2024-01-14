@@ -1,114 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
 
-        <!-- metadata -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Prompt Page</title>
+  <!-- metadata -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Page</title>
 
-        <!-- Link to external CSS file -->
-        <link rel="stylesheet" type="text/css" href="../styles/styles.css">
-    </head>
-    <body>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+</head>
+<body>
 
-        <!-- Include backend.js script -->
-        <script src="../scripts/backend.js"></script>
-        
-        <!-- Header with images and content -->
-        <header>
-            <div class="logo">
-                <!-- Your logo or images go here -->
-                <a href="index.html" rel="noopener noreferrer">
-                    <img src="logo.png" alt="AI Fit Scheduler Logo">
-                </a>
-            </div>
+<!-- Include backend.js script -->
+<script src="../scripts/index.js" defer></script>
 
-            <!-- Navbar with functional dropdowns -->
-            <nav>
-                <div class="navbar-container">
-                    <div class="dropdown">
-                        <button class="dropbtn">Dropdown 1</button>
-                        <div class="dropdown-content">
-                            <a href="#">Option 1</a>
-                            <a href="#">Option 2</a>
-                            <a href="#">Option 3</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropbtn">Dropdown 2</button>
-                        <div class="dropdown-content">
-                            <a href="#">Option 1</a>
-                            <a href="#">Option 2</a>
-                            <a href="#">Option 3</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
+<!-- Header with images and content -->
+<header>
+  <div class="logo">
+    <!-- Your logo or images go here -->
+    <a href="index.html" rel="noopener noreferrer">
+      <img src="logo.png" alt="AI Fit Scheduler Logo">
+    </a>
+  </div>
 
-        <!-- Take in user input (demographics): “The person is a {gender} who has a weight class of {weight class} and is {age} years old with a height of {height} and is a {experience}.” -->
-
-        <!-- Prompt user to input -->
-        <div class="prompt-section">
-            <label for="gender">Gender:</label>
-            <input type="text" id="gender" placeholder="Enter gender">
-    
-            <label for="weight">Weight Class:</label>
-            <input type="text" id="weight" placeholder="Enter weight class">
-    
-            <label for="age">Age:</label>
-            <input type="text" id="age" placeholder="Enter age">
-    
-            <label for="height">Height:</label>
-            <input type="text" id="height" placeholder="Enter height">
-    
-            <label for="experience">Experience:</label>
-            <input type="text" id="experience" placeholder="Enter experience">
-    
-            <button onclick="generateWorkout()">Generate Workout Plan</button>
+  <!-- Navbar with functional dropdowns -->
+  <nav>
+    <div class="navbar-container">
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown 1</button>
+        <div class="dropdown-content">
+          <a href="#">Option 1</a>
+          <a href="#">Option 2</a>
+          <a href="#">Option 3</a>
         </div>
-        
-        <!-- Result section -->
-        <div class="result-section">
-
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Dropdown 2</button>
+        <div class="dropdown-content">
+          <a href="#">Option 1</a>
+          <a href="#">Option 2</a>
+          <a href="#">Option 3</a>
         </div>
+      </div>
+    </div>
+  </nav>
+</header>
 
-        <!-- Generate workout regimen on the same page -->
+<!-- Take in user input (demographics): “The person is a {gender} who has a weight class of {weight class} and is {age} years old with a height of {height} and is a {experience}.” -->
 
-        <!-- Each workout in the regimen can be redirected to a specific page for the workout -->
+<!-- Prompt user to input -->
+<div class="prompt-section">
+  <label for="gender">Gender:</label>
+  <input type="text" id="gender" placeholder="Enter gender">
+
+  <label for="weight">Weight Class:</label>
+  <input type="text" id="weight" placeholder="Enter weight class">
+
+  <label for="age">Age:</label>
+  <input type="text" id="age" placeholder="Enter age">
+
+  <label for="height">Height:</label>
+  <input type="text" id="height" placeholder="Enter height">
+
+  <label for="experience">Experience:</label>
+  <input type="text" id="experience" placeholder="Enter experience">
+
+  <button onclick="generateWorkoutButton()">Generate Workout Plan</button>
+</div>
+
+<!-- Result section -->
+<div class="result-section">
+</div>
+
+<!-- Generate workout regimen on the same page -->
+
+<!-- Each workout in the regimen can be redirected to a specific page for the workout -->
 
 
-        <!-- Footer -->
-        <footer>
-            &copy; AI Fit Scheduler 2024
-            <!-- Social Handles are to be refrained, *maybe* link GitHub repo -->
-        </footer>   
+<!-- Footer -->
+<footer>
+  &copy; AI Fit Scheduler 2024
+  <!-- Social Handles are to be refrained, *maybe* link GitHub repo -->
+</footer>
 
-        <script>
-            // Function to extract user input and generate workout plan
-            async function generateWorkout() {
-                const user_input = {
-                    gender: document.getElementById('gender').value,
-                    weight_class: document.getElementById('weight').value,
-                    age_range: document.getElementById('age').value,
-                    height: document.getElementById('height').value,
-                    experience: document.getElementById('experience').value
-                };
-    
-                try {
-                    const workout_plan = await generateWorkoutPlan(user_input);
-    
-                    // Display the workout plan in the result section
-                    const resultSection = document.getElementById('resultSection');
-                    resultSection.innerHTML = `<h2>Generated Workout Plan:</h2><p>${workout_plan}</p>`;
-                } catch (error) {
-                    console.error("Error generating workout plan:", error.message);
-                    // Handle errors as needed
-                }
-            }
-        </script>
 
-        
+
 </body>
 </html>
