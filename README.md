@@ -1,9 +1,9 @@
 # ai_fitness_tracker
 Google presentation for early February
 
-For nodejs:
+For nodejs (v18+)
 run the commands:
 
-npm install
-cd scripts
-node backend.js
+<br>npm install
+<br>cd scripts
+<br>node backend.js
