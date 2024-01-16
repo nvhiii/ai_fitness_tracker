@@ -42,8 +42,8 @@ async function generateWorkoutPlan(user_input) {
 		throw error;
     }
 }
-/*
 
+/*
 // Example user input
 const user_input = {
     gender: "female",
