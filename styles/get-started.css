@@ -142,13 +142,3 @@ button:hover {
     background-color: #f2f2f2;
     color: #4169E1;
   }
-
-.prompt-section button{
-    font-size: 18px;
-    cursor: pointer;
-    background-color: #ffffff;
-    border-radius: 50px;
-    color: #4169E1;
-    width: 150px;
-    height: 50px;
-}
