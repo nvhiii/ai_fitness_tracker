@@ -1,16 +1,28 @@
 /* Reset some default styling */
-body, h1, h2, h3, p, ul {
+body, head, h1, h2, h3, p, ul {
     margin: 0;
     padding: 0;
 }
 
 body {
     font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #4169E1, #001f3f);
+    animation: gradientAnimation 5s infinite alternate;
 }
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
 
 /* Header Styles */
 header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -29,14 +41,59 @@ header {
 }
 
 /* Navbar Styles */
-nav {
-    background-color: #333;
-    color: #fff;
-}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+    overflow: hidden;
+    text-align: center;
+    position: fixed;
+    /* Position the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
+    /*Allows the nav bar to be on top while moved */
+    
+  }
+  
+  /* Navigation List design */
+  .navbar li {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
 
 .navbar-container {
     display: flex;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .dropdown {
     position: relative;
@@ -94,3 +151,49 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.sections{
+    color: #ffd700;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 42px;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+button{
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 50px;
+    color: #4169E1;
+    width: 150px;
+    height: 50px;
+}
+
+button:hover {
+    background-color: #f2f2f2;
+    color: #4169E1;
+  }
+
+.prompt-section p{
+    color: white;
+}
+
+/* Next tasks:
+ * Fix prompt page
+ * Adjust button text in get-started
+ */ 
