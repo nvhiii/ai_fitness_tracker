@@ -29,14 +29,14 @@ header {
 }
 
 .logo {
-    display: flex; /* Use flexbox for logo container */
+    display: flex; 
     align-items: center;
 }
 
 .logo img {
     max-width: 100px;
     height: auto;
-    margin-right: 20px; /* Add margin to separate from dropdowns */
+    margin-right: 20px;
 }
 
 /* Navbar Styles */
@@ -51,7 +51,7 @@ nav {
 
 .dropdown {
     position: relative;
-    margin-right: 20px; /* Add margin to separate dropdowns */
+    margin-right: 20px;
 }
 
 .dropbtn {
@@ -143,6 +143,16 @@ button:hover {
     color: #4169E1;
   }
 
+.prompt-section button{
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 50px;
+    color: #4169E1;
+    width: 150px;
+    height: 50px;
+}
+
 .prompt-section p{
     color: white;
 }
@@ -151,3 +161,13 @@ button:hover {
  * Fix prompt page
  * Adjust button text in get-started
  */ 
+
+.workout-regimen body{
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #4169E1);
+ }
+
+.prompt-section{
+    font-family: 'Arial', sans-serif;
+    background: #4169E1;
+}
