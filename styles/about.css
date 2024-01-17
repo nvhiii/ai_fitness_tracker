@@ -6,10 +6,11 @@ body, h1, h2, h3, p, ul {
 body {
     font-family: 'Arial', sans-serif;
     background: #4169E1;
+    margin: 20px;
 }
 
 header {
-    text-align: center;
+    //text-align: center;
     margin-bottom: 20px;
     background-color: #f0f0f0;
     display: flex;

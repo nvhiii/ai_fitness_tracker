@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         <!-- metadata -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,65 +10,26 @@
         <link rel="stylesheet" type="text/css" href="../styles/prompt-page.css">
     </head>
     <body>
-
-        <!-- Include backend.js script -->
         <script src="../scripts/backend.js"></script>
-        
-        <!-- Header with images and content -->
+      <nav>
         <header>
             <div class="logo">
                 <!-- Your logo or images go here -->
                 <a href="get-started.html" rel="noopener noreferrer">
-                    <img src="runner.png" alt="AI Fit Scheduler Logo">
+                    <img src="runner.png" alt="Workout Generator">
                 </a>
             </div>
 
-            <!-- Drop down in the header -->
-                <div class="navbar-container">
-                    <div class="dropdown">
-                        <button class="dropbtn">Dropdown 1</button>
-                        <div class="dropdown-content">
-                            <a href="#">Option 1</a>
-                            <a href="#">Option 2</a>
-                            <a href="#">Option 3</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="dropbtn">Dropdown 2</button>
-                        <div class="dropdown-content">
-                            <a href="#">Option 1</a>
-                            <a href="#">Option 2</a>
-                            <a href="#">Option 3</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="links">
+            <ul class=" "navbar>
+              <li><a href = "get-started.html" onclick="smoothScroll('home')">Home</a></li> <!-- rename HTML sheet to home -->
+              <li><a href = "prompt-page.html" onclick="smoothScroll('prompt-page')">Workout Generator</a></li>
+              <li><a href = "about.html" onclick="smoothScroll('about')">About</a></li>
+              <li><a href = "faq.html" onclick="smoothScroll('faq')">FAQ</a></li>     
+            </ul>
+          </div>
         </header>
-
-  <!-- Navbar with functional dropdowns -->
-  <nav>
-    <div class="navbar-container">
-      <div><a href="get-started.html">Get Started</a></div>
-      <div><a href= ""> Something 2</a></div>
-      <div><a href= ""> Something 3</a></div>     
-      <div class="dropdown">
-        <button class="dropbtn">Dropdown 1</button>
-        <div class="dropdown-content">
-          <a href="#">Option 1</a>
-          <a href="#">Option 2</a>
-          <a href="#">Option 3</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button class="dropbtn">Dropdown 2</button>
-        <div class="dropdown-content">
-          <a href="#">Option 1</a>
-          <a href="#">Option 2</a>
-          <a href="#">Option 3</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
+      </nav>
 
 <!-- Take in user input (demographics): “The person is a {gender} who has a weight class of {weight class} and is {age} years old with a height of {height} and is a {experience}.” -->
 
@@ -102,11 +62,31 @@
 <!-- Each workout in the regimen can be redirected to a specific page for the workout -->
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br>
-<!-- Footer -->
-<footer>
-  &copy; AI Fit Scheduler 2024
-  <!-- Social Handles are to be refrained, *maybe* link GitHub repo -->
-</footer>
+  ` <!-- Footer -->
+    <footer>
+      &copy; AI Fit Scheduler 2024
+      <!-- Social Handles are to be refrained, *maybe* link GitHub repo -->
+    </footer>
 
     </body>
 </html>
+
+            <!-- Drop down in the header
+                <div class="navbar-container">
+                    <div class="dropdown">
+                        <button class="dropbtn">Dropdown 1</button>
+                        <div class="dropdown-content">
+                            <a href="#">Option 1</a>
+                            <a href="#">Option 2</a>
+                            <a href="#">Option 3</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropbtn">Dropdown 2</button>
+                        <div class="dropdown-content">
+                            <a href="#">Option 1</a>
+                            <a href="#">Option 2</a>
+                            <a href="#">Option 3</a>
+                        </div>
+                    </div>
+                </div> -->

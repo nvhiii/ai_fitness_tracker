@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-
         <!-- metadata -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,11 +10,53 @@
         <link rel="stylesheet" type="text/css" href="../styles/get-started.css">
     </head>
     <body>
-
-        <!-- Header with images and content -->
-        <header>
-            <!-- Navbar with functional dropdowns -->
             <nav>
+                <header>
+                    <div class="logo">
+                        <!-- Your logo or images go here -->
+                        <a href="get-started.html" rel="noopener noreferrer">
+                            <img src="runner.png" alt="Workout Generator">
+                        </a>
+                    </div>
+        
+                    <div class="links">
+                    <ul class=" "navbar>
+                      <li><a href = "get-started.html" onclick="smoothScroll('home')">Home</a></li> <!-- rename HTML sheet to home -->
+                      <li><a href = "prompt-page.html" onclick="smoothScroll('prompt-page')">Workout Generator</a></li>
+                      <li><a href = "about.html" onclick="smoothScroll('about')">About</a></li>
+                      <li><a href = "faq.html" onclick="smoothScroll('faq')">FAQ</a></li>     
+                    </ul>
+                  </div>
+                </header>
+              </nav>
+
+        <!-- Unordered List sole section on this page for simplicity -->
+
+        <ul class="sections">
+            <li>
+                <h1>Build to Better</h1>
+                <a href="prompt-page.html" rel="noopener noreferrer">
+                    <button>Start today.</button>
+                </a>
+            </li>
+        </ul>
+        <footer>
+            &copy; AI Fit Scheduler 2024
+            <!-- Social Handles are to be refrained, *maybe* link GitHub repo -->
+        </footer>   
+        <script>
+            function smoothScroll(targetId) {
+              var targetElement = document.getElementById(targetId);
+              window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth"
+              });
+            }
+          </script>
+    </body>
+</html>
+
+            <!-- <nav>
                 <ul classs= "navbar">
                     <li><a href="#what-we-offer"> What we Offer</a></li> 
                     <li><a href="#how-it-works"> How it Works</a></li>
@@ -40,25 +81,4 @@
                         </div>
                     </li>  
                 </ul>
-            </nav>
-        </header>
-
-        <!-- Unordered List sole section on this page for simplicity -->
-
-        <ul class="sections">
-            <li>
-                <h1>Build to Better</h1>
-                <a href="prompt-page.html" rel="noopener noreferrer">
-                    <button>Start today.</button>
-                </a>
-            </li>
-        </ul>
-
-        <!-- Footer -->
-        <footer>
-            &copy; AI Fit Scheduler 2024
-            <!-- Social Handles are to be refrained, *maybe* link GitHub repo -->
-        </footer>   
-        
-    </body>
-</html>
+            </nav> -->
