@@ -31,13 +31,37 @@ header {
 
 /* Navbar Styles */
 nav {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffa500;
 }
 
 .navbar-container {
     display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    overflow: hidden;
 }
+.navbar-container a { 
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.navbar-container div{
+    color: grey;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.navbar-container div:hover{
+    background-color: black;
+    color: red
+}
+
 
 .dropdown {
     position: relative;
@@ -120,3 +144,14 @@ button:hover {
     background-color: #f2f2f2;
     color: #4169E1;
   }
+
+
+.prompt-section {
+    position: center;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    flex: auto;
+    justify-content: space-evenly; 
+}
