@@ -5,24 +5,25 @@ body, h1, h2, h3, p, ul {
 
 body {
     font-family: 'Arial', sans-serif;
-    background: #4169E1;
+    background: linear-gradient(to bottom, #4169E1, #001f3f);
+    animation: gradientAnimation 5s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
 }
 
 header {
-    text-align: center;
-    margin-bottom: 20px;
-    background-color: #f0f0f0;
     display: flex;
     justify-content: space-between;
-}
-
-section {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-p {
-    line-height: 1.6;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffa500;
 }
 
 .logo {
@@ -36,42 +37,13 @@ p {
     margin-right: 20px;
 }
 
-links{
-    list-style: none; /* Remove bullets */
-    
+/* Navbar Styles */
+nav {
+    color: #fff;
 }
-
-/* -------------The navbar is fine up to here ------------- */
-
-/* nav {
-    background-color: #ffa500;
-} */
 
 .navbar-container {
     display: flex;
-    justify-content: space-evenly;
-    text-align: center;
-    overflow: hidden;
-}
-.navbar-container a { 
-    color: white;
-    text-decoration: none;
-    text-align: center;
-}
-
-.navbar-container div{
-    color: grey;
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-}
-
-.navbar-container div:hover{
-    background-color: black;
-    color: red
 }
 
 .dropdown {
@@ -139,10 +111,22 @@ footer {
     height: 100vh;
     margin: 0;
     font-size: 42px;
+    animation: fadeIn 1s ease-out;
 }
 
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 button{
-    font-size: 18px;
+    font-size: 24px;
     cursor: pointer;
     background-color: #ffffff;
     border-radius: 50px;
@@ -154,14 +138,4 @@ button{
 button:hover {
     background-color: #f2f2f2;
     color: #4169E1;
-}
-
-.prompt-section {
-    position: center;
-    overflow: hidden;
-    text-align: center;
-    display: flex;
-    flex-direction: column; 
-    flex: auto;
-    justify-content: space-evenly; 
-}es
+  }
