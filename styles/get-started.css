@@ -37,7 +37,6 @@ header {
     margin-right: 20px;
 }
 
-/* Navbar Styles */
 nav {
     color: #fff;
 }
@@ -138,4 +137,4 @@ button{
 button:hover {
     background-color: #f2f2f2;
     color: #4169E1;
-  }
+}
