@@ -9,7 +9,6 @@ body {
 }
 
 header {
-    text-align: center;
     margin-bottom: 20px;
     background-color: #ffa500;
     display: flex;
@@ -32,7 +31,7 @@ p {
 }
 
 .logo img {
-    max-width: 100px;
+    max-width: 50px;
     height: auto;
     margin-right: 20px;
 }
@@ -41,12 +40,6 @@ links{
     list-style: none; /* Remove bullets */
     
 }
-
-/* -------------The navbar is fine up to here ------------- */
-
-/* nav {
-    background-color: #ffa500;
-} */
 
 .navbar-container {
     display: flex;
