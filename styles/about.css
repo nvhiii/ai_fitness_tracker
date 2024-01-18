@@ -4,7 +4,7 @@ body, h1, h2, h3, p, ul {
 }
 body {
     font-family: 'Arial', sans-serif;
-    background: #4169E1;
+    background: #2e60b3;
 }
 
 header {
@@ -35,6 +35,7 @@ h1{
     height: auto;
     margin-right: 20px;
 }
+
 
 .navbar-container {
     display: flex;
