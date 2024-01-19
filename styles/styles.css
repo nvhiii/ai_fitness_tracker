@@ -1,3 +1,8 @@
+html {
+
+    scroll-behavior: smooth;
+
+}
 * {
 
     /* temporary outline, add background and whatnot to show more contrast */
@@ -66,7 +71,9 @@
     cursor: pointer;
 }
   
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover, .dropbtn:focus,
+#signUpButton:hover, #signUpButton:focus,
+#loginButton:hover, #loginButton:focus {
     background-color: #2980B9;
 }
   
