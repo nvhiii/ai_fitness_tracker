@@ -1,0 +1,262 @@
+* {
+
+    /* temporary outline, add background and whatnot to show more contrast */
+    outline: 2px solid black; 
+    font-family: 'Helvectica', 'Arial', sans-serif;
+
+}
+
+.menu-container {
+
+    background-color: lightblue;
+    color:black;
+
+    font-family: 'Helvectica', 'Arial', sans-serif;
+    font-size: 18px;
+
+    margin-left: 15%;
+    margin-right: 15%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.menu {
+
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 2%;
+
+}
+
+.logo img {
+
+    width:40px;
+    height: 40px;
+
+}
+
+.dropdown {
+
+    margin-right: auto;
+
+}
+
+.sign-up {
+
+    margin-left: auto;
+
+}
+
+.header-container {
+
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header {
+
+    display: flex;
+    height: 300px;
+    width: 100%;
+    /* align-items: inherit; /* vertical alignment in flex display for row */
+    /* justify-content: inherit; /* horizontal alignment in flex display for column */
+
+    padding-top: 3%;
+    padding-left: 5%;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.header-button {
+
+    /* add styling here */
+
+}
+
+.mission-stmnt-container {
+
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.mission-stmnt {
+
+    display: flex;
+    height: 300px;
+    width: 100%;
+
+    padding-left: 2%;
+    align-items: inherit;
+
+}
+
+.mission {
+
+    color:black;
+    font-family: 'Helvectica', 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+
+}
+
+.img-container {
+
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.imgs {
+
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* preferably 300px by 300px svg for img wheel ONLY */
+.attention-img {
+
+    width: 300px;
+    height: 300px;
+
+}
+
+.what-we-offer-container {
+
+    margin-left: 15%;
+    margin-right: 15%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.what-we-offer {
+
+    width: 100%;
+    height: 300px;
+    display: flex;
+
+    padding: 2%;
+
+    align-items: center;
+
+
+}
+
+.wwo-1,
+.wwo-2,
+.wwo-3 {
+
+    height: 200px;
+    padding: 20px;
+    text-align: center;
+
+}
+
+.wwo-1 {
+
+    margin-left: 3%;
+    margin-right: 3%;
+
+}
+
+.wwo-3 {
+
+    margin-right: 3%;
+    margin-left: 3%;
+
+}
+
+.how-it-works-container {
+
+    margin-left: 15%;
+    margin-right: 15%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.how-it-works {
+
+
+
+}
+
+.get-started-container {
+
+    margin-left: 15%;
+    margin-right: 15%;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.get-started {
+
+    display: flex;
+    height: 300px;
+    width: 100%; /* alternative to setting flex basis to 100% */
+
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 5%;
+    padding-bottom: 3%;
+
+}
+
+.get-started-button {
+
+    /* add styling here */
+
+}
+
+.footer-container {
+
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer {
+
+    width: 100%;
+    height: 100px;
+    display: flex;
+    padding-right: 3%;
+    padding-left: 3%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
