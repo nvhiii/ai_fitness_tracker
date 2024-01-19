@@ -151,13 +151,29 @@ button:hover {
 }
 
 .prompt-section {
-    position: center;
-    overflow: hidden;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 600px;
     text-align: center;
-    font-size: 22px;
-    color: #fff;
-    /* display: flex;
-    flex-direction: column; 
-    flex: auto;
-    justify-content: space-evenly;  */
+    transition: opacity 0.3s ease;
+    margin: auto;
 }
+
+label {
+    font-size: 18px; /* Increase label font size */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px; /* Add more bottom margin for separation */
+    color: #333;
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }

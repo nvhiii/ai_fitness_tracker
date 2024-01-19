@@ -30,64 +30,63 @@
         </header>
       </nav>
 
-<!-- Take in user input (demographics): “The person is a {gender}
-   who has a weight class of {weight class} and is {age} years old with a height of {height} and is a {experience}.” -->
-<div class="prompt-section">
-  <label for="gender">Gender:</label>
-  <select id="gender">
-    <option value="" selected disabled>Select Gender</option>
-    <option value="male">Male</option>
-    <option value="female">Female</option>
-    <option value="other">Other</option>
-  </select>
+<!--Take in user input (demographics): “The person is a {gender}
+    who has a weight class of {weight class} and is {age} years old with a height of {height} and is a {experience}.” -->
+          <div class="prompt-section">
+            <label for="gender">Gender:</label>
+            <select id="gender">
+              <option value="" selected disabled>Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
 
-  <label for="weight">Weight Class:</label>
-  <select id="weight">
-    <option value="" selected disabled>Select Weight Class</option>
-    <option value="light">Light</option>
-    <option value="middle">Middle</option>
-    <option value="heavy">Heavy</option>
-  </select>
+            <label for="weight">Weight Class:</label>
+            <select id="weight">
+              <option value="" selected disabled>Select Weight Class</option>
+              
+              <option value="130-139">130-139</option>
+              <option value="140-149">140-149</option>
+              <option value="150-159">150-159</option>
+              <!-- add more weight classes -->
+            </select>
 
-  <label for="age">Age:</label>
-  <select id="age">
-    <option value="" selected disabled>Select Age</option>
-    <option value="18-25">18-25</option>
-    <option value="26-35">26-35</option>
-    <option value="26-35">36-45</option>
-    <option value="26-35">46-55</option>
-    <option value="26-35">56-65</option>
-    <option value="26-35">66-75</option>
-    <option value="26-35">76-85</option>
-    <option value="26-35">86-95</option>
-    <option value="26-35">96+</option>
-  </select>
-  
+            <label for="age">Age:</label>
+            <select id="age">
+              <option value="" selected disabled>Select Age</option>
+              <option value="17 or younger">17 or younger</option>
+              <option value="18-20">18-20</option>
+              <option value="21-29">21-29</option>
+              <option value="30-39">30-39</option>
+              <option value="40-49">40-49</option>
+              <option value="50-59">50-59</option>
+              <option value="60 or older">60 or older</option>
+            </select>
+            
+            <label for="height">Height:</label>
+            <select id="height">
+              <option value="" selected disabled>Select Height</option>
+              <option value="5'1">5'1</option>
+              <option value="5'2">5'2</option>
+              <option value="5'3">5'3</option>
+              <option value="5'4">5'4</option>
+              <option value="5'5">5'5</option>
+              <option value="5'6">5'6</option>
+              <option value="5'7">5'7</option>
+              <option value="5'8">5'8</option>
+              <!-- add more options -->
+            </select>
 
-  <label for="height">Height:</label>
-  <select id="height">
-    <option value="" selected disabled>Select Height</option>
-    <option value="short">5'1</option>
-    <option value="average">5'2</option>
-    <option value="tall">5'3</option>
-    <option value="tall">5'4</option>
-    <option value="tall">5'5</option>
-    <option value="tall">5'6</option>
-    <option value="tall">5'7</option>
-    <option value="tall">5'8</option>
-    <!-- add more options -->
-  </select>
+            <label for="experience">Experience:</label>
+            <select id="experience">
+              <option value="" selected disabled>Select Experience</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
 
-  <label for="experience">Experience:</label>
-  <select id="experience">
-    <option value="" selected disabled>Select Experience</option>
-    <option value="beginner">Beginner</option>
-    <option value="intermediate">Intermediate</option>
-    <option value="advanced">Advanced</option>
-  </select>
-
-  <button onclick="generateWorkoutButton()">Generate Workout Plan</button>
-</div>
+            <button onclick="generateWorkoutButton()">DONE</button>
+          </div>
 
 <!-- Result section -->
 <div class="result-section">
