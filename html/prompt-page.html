@@ -30,24 +30,61 @@
         </header>
       </nav>
 
-<!-- Take in user input (demographics): “The person is a {gender} who has a weight class of {weight class} and is {age} years old with a height of {height} and is a {experience}.” -->
-
-<!-- Prompt user to input -->
+<!-- Take in user input (demographics): “The person is a {gender}
+   who has a weight class of {weight class} and is {age} years old with a height of {height} and is a {experience}.” -->
 <div class="prompt-section">
   <label for="gender">Gender:</label>
-  <input type="text" id="gender" placeholder="Enter gender">
+  <select id="gender">
+    <option value="" selected disabled>Select Gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
 
   <label for="weight">Weight Class:</label>
-  <input type="text" id="weight" placeholder="Enter weight class">
+  <select id="weight">
+    <option value="" selected disabled>Select Weight Class</option>
+    <option value="light">Light</option>
+    <option value="middle">Middle</option>
+    <option value="heavy">Heavy</option>
+  </select>
 
   <label for="age">Age:</label>
-  <input type="text" id="age" placeholder="Enter age">
+  <select id="age">
+    <option value="" selected disabled>Select Age</option>
+    <option value="18-25">18-25</option>
+    <option value="26-35">26-35</option>
+    <option value="26-35">36-45</option>
+    <option value="26-35">46-55</option>
+    <option value="26-35">56-65</option>
+    <option value="26-35">66-75</option>
+    <option value="26-35">76-85</option>
+    <option value="26-35">86-95</option>
+    <option value="26-35">96+</option>
+  </select>
+  
 
   <label for="height">Height:</label>
-  <input type="text" id="height" placeholder="Enter height">
+  <select id="height">
+    <option value="" selected disabled>Select Height</option>
+    <option value="short">5'1</option>
+    <option value="average">5'2</option>
+    <option value="tall">5'3</option>
+    <option value="tall">5'4</option>
+    <option value="tall">5'5</option>
+    <option value="tall">5'6</option>
+    <option value="tall">5'7</option>
+    <option value="tall">5'8</option>
+    <!-- add more options -->
+  </select>
 
   <label for="experience">Experience:</label>
-  <input type="text" id="experience" placeholder="Enter experience">
+  <select id="experience">
+    <option value="" selected disabled>Select Experience</option>
+    <option value="beginner">Beginner</option>
+    <option value="intermediate">Intermediate</option>
+    <option value="advanced">Advanced</option>
+  </select>
 
   <button onclick="generateWorkoutButton()">Generate Workout Plan</button>
 </div>
@@ -85,4 +122,23 @@
                             <a href="#">Option 3</a>
                         </div>
                     </div>
+                </div> -->
+
+                <!-- <div class="prompt-section">
+                  <label for="gender">Gender:</label>
+                  <input type="text" id="gender" placeholder="Enter gender">
+                
+                  <label for="weight">Weight Class:</label>
+                  <input type="text" id="weight" placeholder="Enter weight class">
+                
+                  <label for="age">Age:</label>
+                  <input type="text" id="age" placeholder="Enter age">
+                
+                  <label for="height">Height:</label>
+                  <input type="text" id="height" placeholder="Enter height">
+                
+                  <label for="experience">Experience:</label>
+                  <input type="text" id="experience" placeholder="Enter experience">
+                
+                  <button onclick="generateWorkoutButton()">Generate Workout Plan</button>
                 </div> -->
