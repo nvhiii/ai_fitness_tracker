@@ -43,6 +43,18 @@ nav {
 
 .navbar-container {
     display: flex;
+    align-items: center;
+}
+
+.navbar-container a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.navbar-container a:hover {
+    text-decoration: underline;
 }
 
 .dropdown {
