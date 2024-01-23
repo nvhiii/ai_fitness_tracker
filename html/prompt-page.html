@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <!-- metadata -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Prompt Page</title>
-
-        <!-- Link to external CSS file -->
         <link rel="stylesheet" type="text/css" href="../styles/prompt-page.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     </head>
     <body>
         <script src="../scripts/backend.js"></script>
@@ -41,41 +41,14 @@
               <option value="other">Other</option>
             </select>
 
-            <label for="weight">Weight Class:</label>
-            <select id="weight">
-              <option value="" selected disabled>Select Weight Class</option>
-              
-              <option value="130-139">130-139</option>
-              <option value="140-149">140-149</option>
-              <option value="150-159">150-159</option>
-              <!-- add more weight classes -->
-            </select>
+            <label for="weight class">Weight:</label>
+            <input type="text" id="height" placeholder="Enter Weight" />
 
             <label for="age">Age:</label>
-            <select id="age">
-              <option value="" selected disabled>Select Age</option>
-              <option value="17 or younger">17 or younger</option>
-              <option value="18-20">18-20</option>
-              <option value="21-29">21-29</option>
-              <option value="30-39">30-39</option>
-              <option value="40-49">40-49</option>
-              <option value="50-59">50-59</option>
-              <option value="60 or older">60 or older</option>
-            </select>
+            <input type="text" id="height" placeholder="Enter Age" />
             
             <label for="height">Height:</label>
-            <select id="height">
-              <option value="" selected disabled>Select Height</option>
-              <option value="5'1">5'1</option>
-              <option value="5'2">5'2</option>
-              <option value="5'3">5'3</option>
-              <option value="5'4">5'4</option>
-              <option value="5'5">5'5</option>
-              <option value="5'6">5'6</option>
-              <option value="5'7">5'7</option>
-              <option value="5'8">5'8</option>
-              <!-- add more options -->
-            </select>
+            <input type="text" id="height" placeholder="Enter Height" />
 
             <label for="experience">Experience:</label>
             <select id="experience">

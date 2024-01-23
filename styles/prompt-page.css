@@ -3,9 +3,15 @@ body, h1, h2, h3, p, ul {
     padding: 0;
 }
 
+.varela-round-regular {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 body {
-    font-family: 'Arial', sans-serif;
     background: #2e60b3;
+    font-family: "Varela Round", sans-serif;
 }
 
 header {
@@ -37,8 +43,7 @@ p {
 }
 
 links{
-    list-style: none; /* Remove bullets */
-    
+    list-style: none; /* Remove bullets */ 
 }
 
 .navbar-container {
@@ -170,6 +175,15 @@ label {
   }
 
   select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  input{
     width: 100%;
     padding: 10px;
     margin-bottom: 16px;
