@@ -1,4 +1,5 @@
 async function generateWorkoutButton() {
+  document.getElementById("loading").style.display = "block"
   const backend_url = "http://localhost:3000"
   const user_input = {
     gender: document.getElementById('gender').value,
@@ -17,7 +18,10 @@ async function generateWorkoutButton() {
 
   console.log(user_input);
   fetch(fullUrl)
-    .then(response => response.text()).then(data => appendToElement(data));
+    .then(response => response.text()).then(data => {
+    document.getElementById("loading").style.display = "none";
+    appendToElement(data)
+  });
 }
 
 function appendToElement(text) {
