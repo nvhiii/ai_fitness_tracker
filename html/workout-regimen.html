@@ -1,19 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <!-- create css page for this html file -->
     <!-- <link rel="stylesheet" type="text/css" href="../styles/styles.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <title>Workout Regimen</title>
+=======
+    <title>7-Day Workout Regimen</title>
+    <link rel="stylesheet" type="text/css" href="../styles/workout-regimen.css">
+>>>>>>> 380af69285d89aea844d5b8137e8d2e600e2e1d5
 </head>
+
 <body>
 
-    <h2>Workout Regimen:</h2>
-    <ul id="workout-regimen"></ul>
+  <!--
+    <nav>
+        <header>
+            <div class="logo">
+                <a href="../index.html" rel="noopener noreferrer">
+                    <img src="../images/logo.png" alt="Home">
+                </a>
+            </div>
+
+            <div class="links">
+                <ul class="navbar">
+                    <li><a href="prompt-page.html" onclick="smoothScroll('prompt-page')">Workout Generator</a></li>
+                    <li><a href="about.html" onclick="smoothScroll('about')">About</a></li>
+                    <li><a href="faq.html" onclick="smoothScroll('faq')">FAQ</a></li>
+                </ul>
+            </div>
+        </header>
+    </nav>
+    -->
+
+    <section class="workout-plan">
+        <h1>7-Day Workout Regimen</h1>
+
+	<!-- Day 1 -->
+        <section class="day-section">
+            <h2>Day 1</h2>
+            <ul class="workout-list" id="day1-workout"></ul>
+        </section>
+
+	<!-- Day 2 -->
+        <section class="day-section">
+            <h2>Day 2</h2>
+            <ul class="workout-list" id="day2-workout"></ul>
+        </section>
+
+	<!-- Day 3 -->
+        <section class="day-section">
+            <h2>Day 3</h2>
+            <ul class="workout-list" id="day3-workout"></ul>
+        </section>
+
+	<!-- Day 4 -->
+        <section class="day-section">
+            <h2>Day 4</h2>
+            <ul class="workout-list" id="day4-workout"></ul>
+        </section>
+
+	<!-- Day 5 -->
+        <section class="day-section">
+            <h2>Day 5</h2>
+            <ul class="workout-list" id="day5-workout"></ul>
+        </section>
+
+	<!-- Day 6 -->
+        <section class="day-section">
+            <h2>Day 6</h2>
+            <ul class="workout-list" id="day6-workout"></ul>
+        </section>
+
+	<!-- Day 7 -->
+        <section class="day-section">
+            <h2>Day 7</h2>
+            <ul class="workout-list" id="day7-workout"></ul>
+        </section>
+	
+    </section>
+
+    <footer>
+        &copy; AI Fit Scheduler 2024
+        <!--link GitHub repo -->
+    </footer>
+
+    <script>
+        function smoothScroll(targetId) {
+            var targetElement = document.getElementById(targetId);
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth"
+            });
+        }
+    </script>
 
 </body>
+
 </html>
