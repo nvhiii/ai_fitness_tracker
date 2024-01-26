@@ -13,6 +13,7 @@ body {
   font-family: "Varela Round", sans-serif;
   background: linear-gradient(to bottom, #4169E1, #001f3f);
   animation: gradientAnimation 5s infinite alternate;
+  
 }
 
 header {
@@ -47,70 +48,6 @@ p {
   list-style: none; /* Remove bullets */
 
 }
-
-/* .navbar-container {
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  overflow: hidden;
-}
-
-.navbar-container a {
-  color: white;
-  text-decoration: none;
-  text-align: center;
-}
-
-.navbar-container div {
-  color: grey;
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-}
-
-.navbar-container div:hover {
-  background-color: black;
-  color: red
-}
-
-.dropdown {
-  position: relative;
-  margin-right: 20px;
-}
-
-.dropbtn {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: #333;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-} */
 
 /* Section Styles */
 .sections {
@@ -169,13 +106,14 @@ button:hover {
   margin: auto;
 }
 
-label {
+ label {
   font-size: 18px; /* Increase label font size */
   font-weight: bold;
   display: block;
   margin-bottom: 10px; /* Add more bottom margin for separation */
   color: #333;
-}
+}  
+
 
 select {
   width: 100%;
@@ -197,4 +135,16 @@ select {
 
 #loading {
   display: none;
+}
+
+
+.input{
+  display: flex;
+  align-items: center;
+  width: 97%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
 }
