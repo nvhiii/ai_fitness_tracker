@@ -1,7 +1,5 @@
 html {
-
     scroll-behavior: smooth;
-
 }
 * {
 
@@ -12,7 +10,6 @@ html {
 }
 
 .menu-container {
-
     background-color: lightblue;
     color:black;
 
@@ -99,7 +96,6 @@ html {
 .show {display: block;}
 
 .header-container {
-
     margin-left: 15%;
     margin-right: 15%;
     display: flex;
@@ -110,7 +106,6 @@ html {
 }
 
 .header {
-
     display: flex;
     height: 300px;
     width: 100%;
@@ -284,9 +279,7 @@ html {
 }
 
 .get-started-button {
-
-    /* add styling here */
-
+    cursor: pointer;
 }
 
 .footer-container {
