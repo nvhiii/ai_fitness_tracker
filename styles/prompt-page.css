@@ -10,13 +10,9 @@ body, h1, h2, h3, p, ul {
   }
 
 body {
-<<<<<<< HEAD
-    background: #2e60b3;
-    font-family: "Varela Round", sans-serif;
-=======
-  font-family: 'Arial', sans-serif;
-  background: #2e60b3;
->>>>>>> 380af69285d89aea844d5b8137e8d2e600e2e1d5
+  font-family: "Varela Round", sans-serif;
+  background: linear-gradient(to bottom, #4169E1, #001f3f);
+  animation: gradientAnimation 5s infinite alternate;
 }
 
 header {
@@ -47,17 +43,12 @@ p {
   margin-right: 20px;
 }
 
-<<<<<<< HEAD
-links{
-    list-style: none; /* Remove bullets */ 
-=======
 .links {
   list-style: none; /* Remove bullets */
 
->>>>>>> 380af69285d89aea844d5b8137e8d2e600e2e1d5
 }
 
-.navbar-container {
+/* .navbar-container {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
@@ -119,7 +110,7 @@ links{
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
+} */
 
 /* Section Styles */
 .sections {
@@ -179,32 +170,6 @@ button:hover {
 }
 
 label {
-<<<<<<< HEAD
-    font-size: 18px; /* Increase label font size */
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px; /* Add more bottom margin for separation */
-    color: #333;
-  }
-
-  select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-  }
-
-  input{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 14px;
-  }
-=======
   font-size: 18px; /* Increase label font size */
   font-weight: bold;
   display: block;
@@ -233,4 +198,3 @@ select {
 #loading {
   display: none;
 }
->>>>>>> 380af69285d89aea844d5b8137e8d2e600e2e1d5
