@@ -1,6 +1,9 @@
 async function generateWorkoutButton() {
-  document.getElementById("loading").style.display = "block"
-  const backend_url = "http://localhost:3000"
+  document.getElementById("loading").style.display = "block";
+
+  const backend_url = "http://localhost:3000";
+
+  // Your existing code to get user input
   const user_input = {
     gender: document.getElementById('gender').value,
     weight_class: document.getElementById('weight').value,
@@ -9,6 +12,7 @@ async function generateWorkoutButton() {
     experience: document.getElementById('experience').value
   };
 
+  // Your existing code to create the query string
   const queryString = Object.entries(user_input)
     .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
     .join('&');
@@ -17,15 +21,19 @@ async function generateWorkoutButton() {
   const fullUrl = queryString ? `${backend_url}?${queryString}` : backend_url;
 
   console.log(user_input);
+
+  // Fetch data from the backend
   fetch(fullUrl)
-    .then(response => response.text()).then(data => {
-    document.getElementById("loading").style.display = "none";
-    appendToElement(data)
-  });
+    .then(response => response.text()) // Assuming the response is text
+    .then(data => {
+      document.getElementById("loading").style.display = "none";
+      // Store the data in local storage
+      localStorage.setItem('workoutData', data);
+      // Redirect to workout-regimen.html
+      window.location.href = "workout-regimen.html";
+    })
+    .catch(error => {
+      console.error("Error fetching data:", error);
+      document.getElementById("loading").style.display = "none";
+    });
 }
-
-function appendToElement(text) {
-  const resultSection = document.querySelector('div.result-section');
-  resultSection.innerHTML += `<p>${text}</p>`;
-}
-
