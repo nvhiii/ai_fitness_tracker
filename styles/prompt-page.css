@@ -13,7 +13,7 @@ body {
   font-family: "Varela Round", sans-serif;
   display: flex;
   /* background: linear-gradient(to bottom, #4169E1, #001f3f); */
-  background-image: url(https://img.freepik.com/premium-photo/athletic-man-woman-jogging-along-field-outside-city-sunset-runners-training-picturesque-outdoor-area-young-caucasian-couple-sportive-clothes-motivated-concentrated_183219-9417.jpg);
+  background-image: url(https://gothammag.com/get/files/image/galleries/running-nyc.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -147,7 +147,7 @@ button:hover {
   text-align: center;
   transition: opacity 0.3s ease;
   position: center;
-  margin:auto;
+  margin-top: 20px; /* Adjust the margin-top value as needed */
 }
 
  label {
