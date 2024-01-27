@@ -1,143 +1,65 @@
-body, h1, h2, h3, p, ul {
+body {
+  font-family: 'Varela Round', sans-serif;
   margin: 0;
   padding: 0;
-}
-
-.varela-round-regular {
-    font-family: "Varela Round", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-body {
-  font-family: "Varela Round", sans-serif;
-  display: flex;
-  /* background: linear-gradient(to bottom, #4169E1, #001f3f); */
+  box-sizing: border-box;
   background-image: url(https://gothammag.com/get/files/image/galleries/running-nyc.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  object-fit: cover;
-  position: relative;
 }
 
 header {
-  margin-bottom: 20px;
   background-color: linen;
-  display: block;
-  justify-content: space-between;
-  padding: 20px;
-  flex-direction: row;
+  color: white;
+  padding: 10px;
 }
 
 nav {
-  color: #fff;
   display: flex;
   justify-content: space-between;
-}
-section{
-  margin: 100px;
-  justify-content: space-between;
-  position: relative;
-}
-
-.links {
-  display: flex;
   align-items: center;
 }
 
 .navbar {
   list-style: none;
-  display: flex;
-  margin-left: auto;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar li {
-  margin-left: 20px;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  padding: 10px;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-  color: #ffd700;
-  background-color: #333;
-}
-
-p {
-  line-height: 1.6;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  margin-right: 15px;
 }
 
 .logo img {
-  max-width: 50px;
-  height: auto;
-  margin-right: 20px;
+  max-height: 50px; /* Adjust the height as needed */
 }
 
-.links {
-  list-style: none; /* Remove bullets */
-
-}
-
-/* Section Styles */
-.sections {
-  list-style: none;
+section {
   padding: 20px;
 }
 
-.sections li {
-  margin-bottom: 20px;
+.prompt-section {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-/* Footer Styles */
+.input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.result-section {
+  margin-top: 20px; /* Adjust the margin-top value as needed */
+}
+
 footer {
   background-color: #333;
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
-
-.sections {
-  color: #ffd700;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-size: 42px;
-}
-
-button {
-  font-size: 18px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border-radius: 50px;
-  color: #4169E1;
-  width: 150px;
-  height: 50px;
-}
-
-button:hover {
-  background-color: #f2f2f2;
-  color: #4169E1;
-}
-
 .prompt-section {
   background-color: #fff;
   border-radius: 20px;
@@ -150,14 +72,13 @@ button:hover {
   margin-top: 20px; /* Adjust the margin-top value as needed */
 }
 
- label {
+label {
   font-size: 18px; /* Increase label font size */
   font-weight: bold;
   display: block;
   margin-bottom: 10px; /* Add more bottom margin for separation */
   color: #333;
-}  
-
+}
 
 select {
   width: 100%;
@@ -176,14 +97,14 @@ select {
   align-items: center;
   justify-content: center;
   color:white;
+  margin-top: 20px; /* Adjust the margin-top value as needed */
 }
 
 #loading {
   display: none;
 }
 
-
-.input{
+.input {
   display: flex;
   align-items: center;
   width: 97%;
