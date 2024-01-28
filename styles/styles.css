@@ -2,11 +2,9 @@ html {
     scroll-behavior: smooth;
 }
 * {
-
     /* temporary outline, add background and whatnot to show more contrast */
     outline: 2px solid black; 
     font-family: 'Helvectica', 'Arial', sans-serif;
-
 }
 
 .menu-container {
@@ -24,27 +22,24 @@ html {
     justify-content: space-between;
 
 }
+body{
+    /* background: #050801; */
+}
 
 .menu {
-
     display: flex;
     width: 100%;
     align-items: center;
     padding: 2%;
-
 }
 
 .logo img {
-
     width:40px;
     height: 40px;
-
 }
 
 .logo {
-
     margin-right: auto;
-
 }
 
 /* dropdown styling, will edit later */
@@ -102,7 +97,6 @@ html {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 }
 
 .header {
@@ -119,10 +113,22 @@ html {
 
 }
 
-.header-button {
+#headerButton {
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    transition: 0.5s;
+    letter-spacing: 4px;
+}
 
-    /* add styling here */
-
+#headerButton:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4, 
+                0 0 25px #03e9f4, 
+                0 0 50px #03e9f4, 
+                0 0 200px #03e9f4;
 }
 
 .mission-stmnt-container {
@@ -278,8 +284,45 @@ html {
 
 }
 
-.get-started-button {
-    cursor: pointer;
+#get-started-button {
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    transition: 0.5s;
+    letter-spacing: 4px;
+}
+
+#get-started-button:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4, 
+                0 0 25px #03e9f4, 
+                0 0 50px #03e9f4, 
+                0 0 200px #03e9f4;
+}
+
+#get-started-button span{
+    position: absolute;
+    display: block;
+}
+
+#get-started-button span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%, 100%{
+        left: 100%;
+    }
 }
 
 .footer-container {
@@ -303,4 +346,4 @@ html {
     justify-content: space-between;
     align-items: center;
 
-}
+} 
