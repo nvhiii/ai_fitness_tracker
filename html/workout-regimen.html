@@ -13,21 +13,21 @@
  
 	<nav>
   	<header>
-    <!--
-        	<div class="logo">
+	  <!--
+              <div class="logo">
             	<a href="../index.html" rel="noopener noreferrer">
-                	<img src="../images/logo.png" alt="Home">
+                  <img src="../images/logo.png" alt="Home">
             	</a>
-        	</div>
-    	-->
+              </div>
+    	      -->
 
-        	<div class="links">
+              <div class="links">
             	<ul class="navbar">
                 	<li><a href="prompt-page.html" onclick="smoothScroll('prompt-page')">Workout Generator</a></li>
                 	<li><a href="about.html" onclick="smoothScroll('about')">About</a></li>
                 	<li><a href="faq.html" onclick="smoothScroll('faq')">FAQ</a></li>
             	</ul>
-        	</div>
+              </div>
     	</header>
 	</nav>
     
@@ -76,7 +76,7 @@
 
 
 	<!-- Display results in this div -->
-	<div class="result-section" id="workout-result"></div>
+  <div class="result-section" id="workout-result"></div>
     
 
 	<footer>
@@ -91,16 +91,24 @@
 	const workoutData = localStorage.getItem('workoutData');
 
 	function appendToElement(text) {
-  	const resultSection = document.getElementById('workout-result');
-  	resultSection.innerHTML = `<p>${text}</p>`;
+  	    const resultSection = document.getElementById('workout-result');
+  	    resultSection.innerHTML = `<p>${text}</p>`;
 	}
 
 	// Display the retrieved data
 	if (workoutData) {
-  	appendToElement(workoutData);
-  	// Clear the data from local storage (optional)
-  	localStorage.removeItem('workoutData');
-	}
+    const workout_plan = JSON.parse(workoutData); // Parse the JSON data
+    workout_plan.forEach((day, index) => {
+        // Find the corresponding day section by ID
+        const daySection = document.getElementById(`day${index + 1}-workout`);
+        if (daySection) {
+            // Populate the workout list for the day
+            daySection.innerHTML = `<li>${day}</li>`;
+        }
+    });
+    // Clear the data from local storage (optional)
+    localStorage.removeItem('workoutData');
+}
  	 
     	function smoothScroll(targetId) {
         	var targetElement = document.getElementById(targetId);
