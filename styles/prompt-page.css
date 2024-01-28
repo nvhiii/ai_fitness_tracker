@@ -7,6 +7,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 100vh;
 }
 
 nav {
@@ -38,6 +39,9 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .prompt-section {
@@ -97,10 +101,10 @@ select {
 
 header {
   margin-bottom: 20px;
-  background-color:#2e60b3;
   display: block;
   justify-content: space-between;
   padding: 20px;
+
   flex-direction: row;
 }
 
@@ -124,6 +128,7 @@ p {
 }
 
 .navbar {
+  
   list-style: none;
   display: flex;
 }
@@ -133,6 +138,8 @@ p {
 }
 
 .navbar a {
+  background-color: grey;
+  opacity: 0.5;
   color: #fff;
   text-decoration: none;
   font-size: 18px;
