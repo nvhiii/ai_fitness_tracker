@@ -1,5 +1,14 @@
 async function generateWorkoutButton() {
-  document.getElementById("loading").style.display = "block";
+  // Show loading screen
+  const loadingElement = document.getElementById("loading");
+  loadingElement.style.display = "block";
+
+  // Set loading screen to cover the entire background
+  loadingElement.style.position = "fixed";
+  loadingElement.style.top = "0";
+  loadingElement.style.left = "0";
+  loadingElement.style.width = "100%";
+  loadingElement.style.height = "100%";
 
   const backend_url = "http://localhost:3000";
 
@@ -12,6 +21,7 @@ async function generateWorkoutButton() {
     experience: document.getElementById('experience').value
   };
 
+  
   // Your existing code to create the query string
   const queryString = Object.entries(user_input)
     .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
@@ -27,6 +37,7 @@ async function generateWorkoutButton() {
     .then(response => response.text()) // Assuming the response is text
     .then(data => {
       document.getElementById("loading").style.display = "none";
+
       // Store the data in local storage
       localStorage.setItem('workoutData', data);
       // Redirect to workout-regimen.html
@@ -36,4 +47,6 @@ async function generateWorkoutButton() {
       console.error("Error fetching data:", error);
       document.getElementById("loading").style.display = "none";
     });
+
+  
 }
