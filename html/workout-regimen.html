@@ -4,123 +4,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>7-Day Workout Regimen</title>
+  <title>Workout Regimen</title>
   <link rel="stylesheet" type="text/css" href="../styles/workout-regimen.css">
 </head>
 
 <body>
 
- 
-	<nav>
-  	<header>
-	  <!--
-              <div class="logo">
-            	<a href="../index.html" rel="noopener noreferrer">
-                  <img src="../images/logo.png" alt="Home">
-            	</a>
-              </div>
-    	      -->
+  <!-- Your existing code -->
 
-              <div class="links">
-            	<ul class="navbar">
-                	<li><a href="prompt-page.html" onclick="smoothScroll('prompt-page')">Workout Generator</a></li>
-                	<li><a href="about.html" onclick="smoothScroll('about')">About</a></li>
-                	<li><a href="faq.html" onclick="smoothScroll('faq')">FAQ</a></li>
-            	</ul>
-              </div>
-    	</header>
-	</nav>
-    
+  <section class="workout-plan">
+    <h1>Workout Regimen</h1>
 
-	<section class="workout-plan">
-    	<h1>Your 7-Day Workout Regimen</h1>
+    <!-- ... Repeat for Day 2 to Day 7 ... -->
 
-    
-    <section class="day-section">
-      <h2>Day 1</h2>
-      <ul class="workout-list" id="day1-workout"></ul>
-    </section>
+  </section>
 
-    <section class="day-section">
-      <h2>Day 2</h2>
-      <ul class="workout-list" id="day2-workout"></ul>
-    </section>
-
-    <section class="day-section">
-      <h2>Day 3</h2>
-      <ul class="workout-list" id="day3-workout"></ul>
-    </section>
-
-    <section class="day-section">
-      <h2>Day 4</h2>
-      <ul class="workout-list" id="day4-workout"></ul>
-    </section>
-
-    <section class="day-section">
-      <h2>Day 5</h2>
-      <ul class="workout-list" id="day5-workout"></ul>
-    </section>
-
-    <section class="day-section">
-      <h2>Day 6</h2>
-      <ul class="workout-list" id="day6-workout"></ul>
-    </section>
-
-    <section class="day-section">
-      <h2>Day 7</h2>
-      <ul class="workout-list" id="day7-workout"></ul>
-    </section>
-    
-    
-	</section>
-
-
-	<!-- Display results in this div -->
+  <!-- Display results in this div -->
   <div class="result-section" id="workout-result"></div>
+
+  <footer>
+    &copy; AI Fit Scheduler 2024
+    <!-- link GitHub repo -->
+  </footer>
+
+  <script>
+    // Retrieve data from local storage
+    const workoutData = localStorage.getItem('workoutData');
     
+    function appendToElement(text) {
+      const resultSection = document.getElementById('workout-result');
+  
+      // Split the text into individual days
+      const days = text.split('**Day ');
+  
+      // Remove the first empty element from the split
+      days.shift();
+  
+      // Create a list and append each day's workout
+      const resultList = document.createElement('ul');
+  
+      days.forEach((day, index) => {
+        const dayContent = day.split('**');
+        const dayNumber = dayContent[0].trim();
+        const exercises = dayContent[1].split('*').map(exercise => exercise.trim()).filter(Boolean);
+  
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>${dayNumber}</strong>`;
+        
+        // Create a sublist for each day's exercises
+        const exerciseList = document.createElement('ul');
+        exercises.forEach(exercise => {
+          const exerciseItem = document.createElement('li');
+          exerciseItem.innerHTML = exercise.replace(/(\r\n|\n|\r)/gm, "<br>");
+          exerciseList.appendChild(exerciseItem);
+        });
+  
+        listItem.appendChild(exerciseList);
+        resultList.appendChild(listItem);
+      });
+  
+      // Clear existing content and append the formatted list
+      resultSection.innerHTML = '';
+      resultSection.appendChild(resultList);
+    }
+  
+    // Display the retrieved data
+    if (workoutData) {
+      appendToElement(workoutData);
+      // Clear the data from local storage (optional)
+      localStorage.removeItem('workoutData');
+    }
+  </script>
 
-	<footer>
-    	&copy; AI Fit Scheduler 2024
-    	<!--link GitHub repo -->
-	</footer>
+  <!-- Include your other scripts here -->
 
-	<script>
-
-
-  	// Retrieve data from local storage
-	const workoutData = localStorage.getItem('workoutData');
-
-	function appendToElement(text) {
-  	    const resultSection = document.getElementById('workout-result');
-  	    resultSection.innerHTML = `<p>${text}</p>`;
-	}
-
-	// Display the retrieved data
-	if (workoutData) {
-    const workout_plan = JSON.parse(workoutData); // Parse the JSON data
-    workout_plan.forEach((day, index) => {
-        // Find the corresponding day section by ID
-        const daySection = document.getElementById(`day${index + 1}-workout`);
-        if (daySection) {
-            // Populate the workout list for the day
-            daySection.innerHTML = `<li>${day}</li>`;
-        }
-    });
-    // Clear the data from local storage (optional)
-    localStorage.removeItem('workoutData');
-}
- 	 
-    	function smoothScroll(targetId) {
-        	var targetElement = document.getElementById(targetId);
-        	window.scrollTo({
-            	top: targetElement.offsetTop,
-            	behavior: "smooth"
-        	});
-    	}
- 	 
-	</script>
-
-	<script src="../scripts/index.js"></script>
+  <script src="../scripts/index.js"></script>
+  <!-- Add any other scripts you have, like smoothScroll, etc. -->
 
 </body>
 
