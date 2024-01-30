@@ -1,192 +1,60 @@
-<!-- DO NOT MOVE FROM ROOT DIR, WILL HOST ON GITHUB -->
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
-        <!-- metadata -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Get Started</title>
 
-        <!-- tab title -->
-        <title>AI Fitness Scheduler</title>
-
-        <!-- link style sheet -->
-        <link rel="stylesheet" href="./styles/styles.css">
-
+        <link rel="stylesheet" type="text/css" href="../styles/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     </head>
-
     <body>
-
-        <!-- body elements -->
-        <!-- not sure what else to add -->
-
-        <!-- flex container -->
-        <div class="menu-container">
-
-            <div class="menu">
-
-                <!-- flex items -->
-                <!-- menu-left -->
-
-                <!-- change to svg if possible, should have many resources to do this! -->
-                <div class="logo">
-
-                    <a href="index.html">
-                        <img src="./images/logo.png" alt="AI Fit Scheduler Logo">
-                    </a>
-
-                </div>
-
-                <!-- menu-right -->
-                <!-- ADD DROPDOWN HERE -->
-                <div class="dropdown">
-                    
-                    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a href="./index.html">Home</a>
-                        <a href="./html/about.html">About</a>
-                        <a href="./html/get-started.html">Get Started</a>
+            <nav>
+                <header>
+                    <div class="logo">
+                        <a href="../index.html" rel="noopener noreferrer">
+                            <img src="../images/logo.png" alt="Home">
+                        </a>
                     </div>
-                    
-                </div>
+        
+                    <div class="links">
+                    <ul class="navbar">
+                      <li><a href = "prompt-page.html" onclick="smoothScroll('prompt-page')">Workout Generator</a></li>
+                      <li><a href = "about.html" onclick="smoothScroll('about')">About</a></li>
+                      <li><a href = "faq.html" onclick="smoothScroll('faq')">FAQ</a></li>     
+                    </ul>
+                  </div>
+                </header>
+              </nav>
 
-                <div class="sign-up">
-
-                    <!-- change into js script, easy -->
-                    <button onclick="location.href = 'enter-link-here';" id="signUpButton">Sign Up</button>
-
-                </div>
-
-                <div class="login">
-                    
-                    <!-- change into js script, easy -->
-                    <button onclick="location.href = 'enter-link-here';" id="loginButton">Login</button>
-
-                </div> 
-
+        <div class="sections">
+            <li>
+                <h1>Build to Better</h1>
+                <a href="prompt-page.html" rel="noopener noreferrer">
+                    <button>Start today.</button>
+                </a>
+            </li>
+            <div class="gallery">
+                <img src="../images/image1.svg" alt="Fitness Image 1">
+                <img src="../images/image2.svg" alt="Fitness Image 2">
+                <img src="../images/image3.svg" alt="Fitness Image 3">
             </div>
-            
-            
         </div>
-
-        <div class="header-container">
-
-            <div class="header">
-
-                <div class="header-button">
-
-                    <!-- change into js script, easy -->
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <button onclick="location.href = './html/about.html';" id="headerButton">About us</button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="mission-stmnt-container">
-
-            <div class="mission-stmnt">
-
-                <!-- Mission Statement Quote -->
-                <div class="mission">Empowering lives through seamless AI fitness, where every step counts and every goal is within reach</div>
-
-            </div>
-
-        </div>
-
-        <!-- Possibly add a image wheel, interactive? -->
-
-            <!-- Add wall-to-wall images for each section, center with margin and padding, use flex box -->
-
-        </div>
-
-        <div class="what-we-offer-container">
-
-            <div class="what-we-offer">
-
-                <!-- enter stuff here -->
-                
-                <div class="wwo-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti molestiae dicta beatae debitis, minus nulla porro voluptatum nemo ea, soluta temporibus quam eos libero? Inventore veniam libero ex fugit eum.</div>
-                <div class="wwo-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reprehenderit rerum id exercitationem doloribus sit, pariatur ullam earum ab cupiditate labore tempora animi ad, neque molestiae debitis nisi molestias ratione!</div>
-                <div class="wwo-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolore nobis! Dolores quia explicabo, ratione aliquid illum possimus natus corporis officia soluta id autem, sunt nemo doloremque commodi blanditiis reiciendis?</div>
-                    
-
-            </div>
-
-        </div>
-
-        <div class="how-it-works-container">
-
-            <div class="how-it-works">
-
-                <!-- enter stuff here -->
-
-            </div>
-
-        </div>
-
-        <div class="get-started-container">
-
-            <div class="get-started">
-
-                <!-- enter stuff here -->
-
-                <div class="get-started-button">
-                    
-                    <!-- change into js script, easy -->
-                    <button onclick="location.href = './html/get-started.html';" id="headerButton">Get Started</button>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="footer-container">
-
-            <!-- item 1, 3 horizontally display -->
-            <div class="footer">
-
-                <div class="footer-item">Socials</div>
-                <div class="footer-item">
-                    <a href="./html/faq.html">FAQ</a>
-                </div>
-                <div class="footer-item">Sponsor Us</div>
-
-                <!-- copyright centered at bottom -->
-                <div class="footer-item">Copyright AI Fitness Scheduler 2024 &copy;</div>
-                
-            </div>
-
-        </div>
-
+    
+        <footer>
+            &copy; AI Fit Scheduler 2024
+            <!-- link GitHub repo -->
+        </footer>   
         <script>
-            /* When the user clicks on the button, 
-            toggle between hiding and showing the dropdown content */
-            function myFunction() {
-              document.getElementById("myDropdown").classList.toggle("show");
+            function smoothScroll(targetId) {
+              var targetElement = document.getElementById(targetId);
+              window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth"
+              });
             }
-            
-            // Close the dropdown if the user clicks outside of it
-            window.onclick = function(event) {
-              if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                  var openDropdown = dropdowns[i];
-                  if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                  }
-                }
-              }
-            }
-        </script>
-
+          </script>
     </body>
-
 </html>
