@@ -98,10 +98,6 @@ footer {
 
 .info {
     padding: 20px;
-<<<<<<< HEAD
-    width: 600px;
-}
-=======
     text-align: justify;
     padding-left: 50px;
 }
@@ -120,4 +116,3 @@ footer {
 .info a:hover {
     text-decoration: underline;
 }
->>>>>>> 380af69285d89aea844d5b8137e8d2e600e2e1d5
