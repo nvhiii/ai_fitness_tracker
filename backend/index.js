@@ -1,7 +1,8 @@
+require("dotenv").config();
+
 const {GoogleGenerativeAI, HarmCategory, HarmBlockThreshold} = require("@google/generative-ai");
 
 const MODEL_NAME = "gemini-pro";
-const API_KEY = "AIzaSyDf0vX1frSdozgaOtOzmS5tb8ZNtt7T95Q";
 
 const express = require('express');
 const app = express();
@@ -23,7 +24,7 @@ app.listen(port, () => {
  * @return Promise that resolves to generated workout plan
  */
 async function generateWorkoutPlan(user_input) {
-    const genAI = new GoogleGenerativeAI(API_KEY);
+    const genAI = new GoogleGenerativeAI(process.env.API_KEY);
     const model = genAI.getGenerativeModel({model: MODEL_NAME});
 
     // user_input.type
