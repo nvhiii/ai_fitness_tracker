@@ -13,23 +13,46 @@ body {
     font-family: "Arial", sans-serif;
     background: #2e60b3;
     color: #fff;
+
+}
+
+.logo {
+    display: flex; 
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 20px;
 }
 
 header {
-    display: flex;
+    margin-bottom: 20px;
+    display: block;
     justify-content: space-between;
-    align-items: center;
     padding: 20px;
-    /* background-color: #ffa500; */
+    flex-direction: row;
 }
 
+p {
+    line-height: 1.6;
+}
+  
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+  
 .navbar-container {                                                                           
     display: flex;                                                                            
 }                                                                                             
                                                                                               
 .navbar {                                                                                     
     list-style: none;                                                                         
-    display: flex;                                                                            
+    display: flex;    
+                                                                            
 }                                                                                             
                                                                                               
 .navbar li {                                                                                  
@@ -58,6 +81,7 @@ links {
 
 .workout-plan {
     padding: 20px;
+    text-align: center;
 }
 
 .day-section {
@@ -80,3 +104,4 @@ footer {
     bottom: 0;                                                                                
     width: 100%;                                                                              
 }
+

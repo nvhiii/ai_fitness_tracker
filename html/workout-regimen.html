@@ -11,6 +11,22 @@
 <body>
 
   <!-- Your existing code -->
+      <nav>
+        <div class="logo">
+            <!-- Your logo or images go here -->
+            <a href="../index.html" rel="noopener noreferrer">
+              <img src="../images/logo.png" alt="Home">
+            </a>
+        </div>
+
+        <div class="links">
+        <ul class="navbar">
+          <li><a href = "prompt-page.html" onclick="smoothScroll('prompt-page')">Workout Generator</a></li>
+          <li><a href = "about.html" onclick="smoothScroll('about')">About</a></li>
+          <li><a href = "faq.html" onclick="smoothScroll('faq')">FAQ</a></li>     
+        </ul>
+      </div>
+    </nav>
 
   <section class="workout-plan">
     <h1>Workout Regimen</h1>
@@ -23,8 +39,7 @@
   <div class="result-section" id="workout-result"></div>
 
   <footer>
-    &copy; AI Fit Scheduler 2024
-    <!-- link GitHub repo -->
+    &copy; AI Fit Scheduler 2024 | <a href="https://github.com/nvhiii/ai_fitness_tracker" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
   </footer>
 
   <script>
@@ -50,9 +65,17 @@
   
         const listItem = document.createElement('li');
         listItem.innerHTML = `<strong>${dayNumber}</strong>`;
+        listItem.style.border = '1px solid #ccc'; // Add a 1px solid border around the list item
+        listItem.style.borderRadius = '5px'; // Add some border radius for a rounded appearance
+        listItem.style.padding = '10px'; // Add some padding to the list item
+        listItem.style.fontSize = "30px";
         
+
         // Create a sublist for each day's exercises
         const exerciseList = document.createElement('ul');
+        exerciseList.style.paddingLeft = '20px'; // Add some left padding to the exercise list
+        exerciseList.style.listStyleType = 'none'; // Remove bullet points from the list
+
         exercises.forEach(exercise => {
           const exerciseItem = document.createElement('li');
           exerciseItem.innerHTML = exercise.replace(/(\r\n|\n|\r)/gm, "<br>");
