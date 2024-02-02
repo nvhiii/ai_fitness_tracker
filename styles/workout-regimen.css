@@ -79,11 +79,6 @@ links {
     list-style: none; /* Remove bullets */;                                                   
 }
 
-.workout-plan {
-    padding: 20px;
-    text-align: center;
-}
-
 .day-section {
     background-color: #333; /* Light gray background */
     border-radius: 10px; /* Rounded corners */
@@ -104,4 +99,29 @@ footer {
     bottom: 0;                                                                                
     width: 100%;                                                                              
 }
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;                                                               
+    color: #ffd700;                                                                           
+    background-color: #333;         
+}
+
+.workout-plan {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; 
+    font-size: 40px;
+  }
+
+  .workout-plan:hover {
+    transform: translateY(-5px); 
+  }
 

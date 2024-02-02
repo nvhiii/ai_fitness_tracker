@@ -34,14 +34,25 @@ section {
   margin-top: 20px; /* Adjust the margin-top value as needed */
 }
 
-footer {
-  background-color: #333;
+footer {                                                                                      
+  background-color: #333;                                                                   
+  color: #fff;                                                                              
+  text-align: center;                                                                       
+  padding: 10px;                                                                            
+  position: fixed;                                                                          
+  bottom: 0;                                                                                
+  width: 100%;                                                                              
+}
+
+footer a{
   color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;                                                               
+  color: #ffd700;                                                                           
+  background-color: #333;         
 }
 
 .prompt-section {
