@@ -94,8 +94,8 @@ footer a{
 }
 
 footer a:hover{
-    text-decoration: underline;                                                               
-    color: #ffd700;                                                                           
+    text-decoration: underline;                                                            
+    color: #ffd700;                                                                       
     background-color: #333;         
 }
 
@@ -106,6 +106,10 @@ footer a:hover{
     padding: 20px;
     margin: 20px;
     margin-top: 20px;
+}
+
+.faq-section h1 {
+    margin-bottom: 20px;
 }
 
 .info {
@@ -129,21 +133,31 @@ footer a:hover{
     text-decoration: underline;
 }
 
+.faq-item {
+    margin-bottom: 30px;
+}
+
 .faq-item h2 {
     cursor: pointer;
 }
 
 .faq-item .answer {
     display: none;
+    margin-top: 10px;
+    margin-left: 25px;
 }
 
-.faq-item.active .answer {
+.question.active .answer {
     display: block;
     margin-top: 10px;
 }
 
-.faq-item.active .dropdown-btn {
-    transform: rotate(180deg);
+.question.active .dropdown-btn {
+    color: #ffd700;
+}
+
+.question.active h2 {
+    color: #ffd700;
 }
 
 .dropdown-btn {
