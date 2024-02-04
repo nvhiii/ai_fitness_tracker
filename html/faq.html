@@ -31,26 +31,64 @@
       </nav>
 
     <section class="faq-section">
-        <div class="faq-item">
-            <h1>FAQ - AI Workout Generator</h1>
-            <h2>How does the AI workout generator work?</h2>
-            <p>The AI workout generator uses advanced algorithms to analyze your fitness data and preferences, creating personalized workout plans tailored to your goals and capabilities.</p>
+      <h1>FAQ - AI Workout Generator</h1>
+        <div class="faq-item"> 
+            <div class="question">
+              <h2 onclick="toggleAnswer(this)"><span class="dropdown-btn">▶</span>  How does the AI workout generator work?</h2>
+              <p class="answer">The AI workout generator uses advanced algorithms to analyze your fitness data and preferences, creating personalized workout plans tailored to your goals and capabilities.</p>
+	    </div>
         </div>
 
         <div class="faq-item">
-            <h2>Is the AI able to adapt my workout routine over time?</h2>
-            <p>Yes, the AI continuously adapts your workout routine based on your progress, feedback, and any changes in your fitness level or goals.</p>
-        </div>
+            <div class="question">
+              <h2 onclick="toggleAnswer(this)"><span class="dropdown-btn">▶</span>  Is the AI able to adapt my workout routine over time?</h2>
+            <p class="answer">Yes, the AI continuously adapts your workout routine based on your progress, feedback, and any changes in your fitness level or goals.</p>
+            </div>
+	</div>
 
         <div class="faq-item">
-            <h2>What types of exercises are included in the workout plans?</h2>
-            <p>The workout plans include a variety of exercises, including cardio, strength training, flexibility exercises, and more. The AI aims to provide a well-rounded and enjoyable fitness experience.</p>
-        </div>
+            <div class="question">
+              <h2 onclick="toggleAnswer(this)"><span class="dropdown-btn">▶</span>  What types of exercises are included in the workout plans?</h2>
+            <p class="answer">The workout plans include a variety of exercises, including cardio, strength training, flexibility exercises, and more. The AI aims to provide a well-rounded and enjoyable fitness experience.</p>
+            </div>
+	</div>
     </section>
 
     <footer>
         &copy; AI Fit Scheduler 2024 | <a href="https://github.com/nvhiii/ai_fitness_tracker" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
       </footer>
+
+    <script>
+        const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+        dropdownBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Toggle active class on parent of dropdown button
+                btn.parentElement.classList.toggle('active');
+                // Toggle visibility of answer
+                const answer = btn.parentElement.querySelector('.answer');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+
+      function toggleAnswer(element) {
+	  const question = element.parentElement;
+	  const answer = question.querySelector('.answer');
+	  const dropdownBtn = question.querySelector('.dropdown-btn');
+	  const isActive = question.classList.contains('active');
+
+	  if (isActive) {
+              question.classList.remove('active');
+              answer.style.display = 'none';
+              dropdownBtn.style.transform = 'rotate(0deg)';
+	  } else {
+              question.classList.add('active');
+              answer.style.display = 'block';
+              dropdownBtn.style.transform = 'rotate(90deg)';
+	  }
+}
+
+
+      </script>
     
 </body>
 

@@ -128,3 +128,27 @@ footer a:hover{
 .info a:hover {
     text-decoration: underline;
 }
+
+.faq-item h2 {
+    cursor: pointer;
+}
+
+.faq-item .answer {
+    display: none;
+}
+
+.faq-item.active .answer {
+    display: block;
+    margin-top: 10px;
+}
+
+.faq-item.active .dropdown-btn {
+    transform: rotate(180deg);
+}
+
+.dropdown-btn {
+    font-size: 16px;
+    margin-left: 5px;
+    transition: transform 0.1s ease;
+    display: inline-block;
+}
