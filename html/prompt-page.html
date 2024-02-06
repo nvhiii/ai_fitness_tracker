@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Prompt Page</title>
-        <link rel="stylesheet" type="text/css" href="../styles/prompt-page.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+      <!-- meta data -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- title -->
+      <title>Prompt Page</title>
+
+      <!-- links -->
+      <link rel="stylesheet" type="text/css" href="../styles/prompt-page.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     </head>
     <body>
-        <script src="../scripts/prompt.js"></script>
-        <section>
+      <script src="../scripts/prompt.js"></script>
+      <section>
         <header>
           <nav>
             <div class="logo">
@@ -27,50 +33,51 @@
               <li><a href = "about.html" onclick="smoothScroll('about')">About</a></li>
               <li><a href = "faq.html" onclick="smoothScroll('faq')">FAQ</a></li>     
             </ul>
-          </div>
-        </nav>
-      </header>
-    </section>
+            </div>
+          </nav>
+        </header>
+      </section>
 
-    <section>
-      <div class="prompt-section">
-          <label for="gender">Gender:</label>
-            <select id="gender">
-              <option value="" selected disabled>Select Gender</option>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
+      <section>
+        <div class="prompt-section">
+            <label for="gender">Gender:</label>
+              <select id="gender">
+                <option value="" selected disabled>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
 
-              <label for="weight">Weight:</label>
-              <input class = "input" type="text" id="weight" placeholder="Enter Weight" />
-              
-              <label for="age">Age:</label>
-              <input class = "input" type="text" id="age" placeholder="Enter Age" />
-              
-              <label for="height">Height:</label>
-              <input class = "input" type="text" id="height" placeholder="Enter Height" />
+                <label for="weight">Weight:</label>
+                <input class = "input" type="text" id="weight" placeholder="Enter Weight" />
+                
+                <label for="age">Age:</label>
+                <input class = "input" type="text" id="age" placeholder="Enter Age" />
+                
+                <label for="height">Height:</label>
+                <input class = "input" type="text" id="height" placeholder="Enter Height" />
 
-            <label for="experience">Experience:</label>
-            <select id="experience">
-              <option value="" selected disabled>Select Experience</option>
-              <option value="beginner">Beginner</option>
-              <option value="intermediate">Intermediate</option>
-              <option value="advanced">Advanced</option>
-            </select>
+              <label for="experience">Experience:</label>
+              <select id="experience">
+                <option value="" selected disabled>Select Experience</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
 
-            <button onclick="generateWorkoutButton()">DONE</button>
-          </div>
-        </section>
-<div class="result-section">
-  <img id="loading" src="../images/Blocks-1s-200px.svg" alt="Loading...">z
-</div>
+              <button onclick="generateWorkoutButton()">DONE</button>
+        </div>
+      </section>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br>
-<footer>
-  &copy; AI Fit Scheduler 2024 | <a href="https://github.com/nvhiii/ai_fitness_tracker" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
-</footer>
+      <div class="result-section">
+        <img id="loading" src="../images/Blocks-1s-200px.svg" alt="Loading...">
+      </div>
 
+
+      <footer>
+        &copy; AI Fit Scheduler 2024 | <a href="https://github.com/nvhiii/ai_fitness_tracker" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+      </footer>
 
     </body>
+
 </html>

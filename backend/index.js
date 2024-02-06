@@ -1,8 +1,32 @@
 require("dotenv").config();
 
+
 const { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } = require("@google/generative-ai");
 
 const MODEL_NAME = "gemini-pro";
+
+safety_settings=[
+  {
+    "category": "HARM_CATEGORY_DANGEROUS",
+    "threshold": "BLOCK_NONE",
+  },
+  {
+    "category": "HARM_CATEGORY_HARASSMENT",
+    "threshold": "BLOCK_NONE",
+  },
+  {
+    "category": "HARM_CATEGORY_HATE_SPEECH",
+    "threshold": "BLOCK_NONE",
+  },
+  {
+    "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+    "threshold": "BLOCK_NONE",
+  },
+  {
+    "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+    "threshold": "BLOCK_NONE",
+  },
+]
 
 const express = require('express');
 const app = express();
@@ -25,7 +49,7 @@ app.listen(port, () => {
  */
 async function generateWorkoutPlan(user_input) {
   const genAI = new GoogleGenerativeAI(process.env.API_KEY);
-  const model = genAI.getGenerativeModel({ model: MODEL_NAME });
+  const model = genAI.getGenerativeModel({ model: MODEL_NAME, safety_settings:"safety_settings" });
 
   // user_input.type
 
