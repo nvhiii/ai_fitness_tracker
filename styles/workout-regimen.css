@@ -121,7 +121,7 @@ footer a:hover{
     font-size: 40px;
   }
 
-  .workout-plan:hover {
+.workout-plan:hover {
     transform: translateY(-5px); 
-  }
+}
 
