@@ -1,6 +1,14 @@
 # Smart Strength Scheduler 
 
-# Usage Purposes:
+## Description
+
+
+
+## Usage Purposes
+
+
+### Dependencies:
+
 For nodejs (v18+)
 run the commands:
 
