@@ -2,9 +2,13 @@
 
 ## Description
 
+<br> Add text here
 
+## Background
 
-## Dependencies:
+<br> Strength training is just as important as cardio, if not even more. Building muscles improves your metabolism, strength, and endurance. Implementing workouts may be difficult, with the plethora of exercises out there. That’s why our app will create a simple, workout plan for you.
+
+## Dependencies
 
 For nodejs (v18+), run the following commands:
 
