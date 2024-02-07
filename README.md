@@ -22,8 +22,8 @@
 
 Contributers and their Information:
 
-<br>Aaleia Fernando
+<br>Aaleia Fernando [@Aaleia Fernando](https://www.linkedin.com/in/aaleia)
 <br>Derek Ni [@Derek Ni](https://www.linkedin.com/in/derek-ni-a638a4267/)
-<br>Nahi Khan
-<br>Sumayia Rashid
+<br>Nahi Khan [@Nahi Khan](https://www.linkedin.com/in/nahi-khan)
+<br>Sumayia Rashid [@Sumayia Rashid](https://www.linkedin.com/in/sumayia-rashid?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
 
