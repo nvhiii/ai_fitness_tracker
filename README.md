@@ -1,4 +1,4 @@
-#Smart Strength Scheduler 
+# Smart Strength Scheduler 
 
 # Usage Purposes:
 For nodejs (v18+)
