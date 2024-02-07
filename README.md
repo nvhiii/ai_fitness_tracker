@@ -1,17 +1,15 @@
 # Smart Strength Scheduler 
 
-## Description
+## Overview
 
-<br> Add text here
-
+<br> A web-app that utilizes the multimodal capabilities of the Google GenerativeAI (Gemini) API and leverages it to create personalized workout regimens for users.
 ## Background
 
 <br> Strength training is just as important as cardio, if not even more. Building muscles improves your metabolism, strength, and endurance. Implementing workouts may be difficult, with the plethora of exercises out there. That’s why our app will create a simple, workout plan for you.
 
 ## Dependencies
 
-For nodejs (v18+), run the following commands:
-
+### For nodejs (v18+) <br>Run the following commands:
 <br> 1.npm install
 <br> 2.cd backend
 <br> 3.npm i dotenv (to configure api keys from local machines)
@@ -23,5 +21,8 @@ For nodejs (v18+), run the following commands:
 
 Contributers and their Information:
 
-xxx
+<br>Aaleia Fernando
+<br>Derek Ni
+<br>Nahi Khan
+<br>Sumayia Rashid
 
