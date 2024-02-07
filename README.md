@@ -19,3 +19,9 @@ For nodejs (v18+), run the following commands:
 <br> 5.node index.js
 
 
+## Authors
+
+Contributers and their Information:
+
+xxx
+
